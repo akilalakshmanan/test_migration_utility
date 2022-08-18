@@ -70,7 +70,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: release
-          path: ./release.zip
+          path: pms-115-120/utility/target/release.zip
 
       - uses: 8398a7/action-slack@v3
         with:
