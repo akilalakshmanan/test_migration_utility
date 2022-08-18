@@ -64,7 +64,7 @@ jobs:
       - name: Ready the springboot artifacts
         run: |
           cd pms-115-120/utility/target/0.0.1-SNAPSHOT
-          find -name '*.jar' -type f  -exec zip ../../../release.zip {} +
+          find -name '*.jar' -type f  -exec zip ../../../test_migration_utility/release.zip {} +
 
       - name: Upload the springboot jars
         uses: actions/upload-artifact@v1
