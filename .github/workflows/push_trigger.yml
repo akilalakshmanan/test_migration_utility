@@ -5,7 +5,7 @@ on:
     branches:
       - '!release-branch'
       - release-1*
-      - main
+      - master
       - 1.*
       - develop
 
