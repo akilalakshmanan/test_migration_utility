@@ -62,7 +62,9 @@ jobs:
           mvn -U -B package --file pom.xml -s $GITHUB_WORKSPACE/settings.xml
 
       - name: Ready the springboot artifacts
-        run: find -name '*.jar' -executable -type f  -exec zip release.zip {} +
+        run: |
+          cd pms-115-120/utility/target/0.0.1-SNAPSHOT
+          find -name '*.jar' -executable -type f  -exec zip release.zip {} +
 
       - name: Upload the springboot jars
         uses: actions/upload-artifact@v1
