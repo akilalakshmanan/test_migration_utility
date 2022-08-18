@@ -63,14 +63,14 @@ jobs:
 
       - name: Ready the springboot artifacts
         run: |
-          cd ./pms-115-120/utility/target/0.0.1-SNAPSHOT
+          cd pms-115-120/utility/target/0.0.1-SNAPSHOT
           find -name '*.jar' -type f  -exec zip release.zip {} +
 
       - name: Upload the springboot jars
         uses: actions/upload-artifact@v1
         with:
           name: release
-          path: pms-115-120/utility/target/release.zip
+          path: ./pms-115-120/utility/target/release.zip
 
       - uses: 8398a7/action-slack@v3
         with:
